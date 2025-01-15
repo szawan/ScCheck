@@ -1,0 +1,28 @@
+/var/spool/slurm/slurmd/job4513171/slurm_script: line 15: source: /cluster/pixstor/xudong-lab/sah2p/tools/miniconda3/bin: is a directory
+Job started on c123.mgmt.hellbender at Tue Oct 29 11:43:02 CDT 2024
+SLURM Job ID: 4513171
+SLURM Job Name: 04_clustering_2024_10_29
+Conda environment: scanpy
+WARNING: saving figure to file figures/pca_variance_ratio04_clustering_PCA.png
+WARNING: saving figure to file figures/umap04_clustering_umap.pdf
+WARNING: saving figure to file figures/tsne04_clustering_tsne.pdf
+Traceback (most recent call last):
+  File "/cluster/pixstor/xudong-lab/sah2p/projects/scGPT/szawa_version/singlecellpipeline/scanpy/04_clustering.py", line 81, in <module>
+    main(args.input_path, args.output_path)
+  File "/cluster/pixstor/xudong-lab/sah2p/projects/scGPT/szawa_version/singlecellpipeline/scanpy/04_clustering.py", line 69, in main
+    adata_obj = reassess_QC(adata_obj)
+  File "/cluster/pixstor/xudong-lab/sah2p/projects/scGPT/szawa_version/singlecellpipeline/scanpy/04_clustering.py", line 46, in reassess_QC
+    sc.pl.umap(
+  File "/mnt/pixstor/dbllab/sah2p/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/scanpy/plotting/_tools/scatterplots.py", line 691, in umap
+    return embedding(adata, "umap", **kwargs)
+  File "/mnt/pixstor/dbllab/sah2p/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/scanpy/plotting/_tools/scatterplots.py", line 279, in embedding
+    color_source_vector = _get_color_source_vector(
+  File "/mnt/pixstor/dbllab/sah2p/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/scanpy/plotting/_tools/scatterplots.py", line 1207, in _get_color_source_vector
+    values = adata.obs_vector(value_to_plot, layer=layer)
+  File "/mnt/pixstor/dbllab/sah2p/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/anndata/_core/anndata.py", line 1453, in obs_vector
+    return get_vector(self, k, "obs", "var", layer=layer)
+  File "/mnt/pixstor/dbllab/sah2p/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/anndata/_core/index.py", line 219, in get_vector
+    raise KeyError(
+KeyError: 'Could not find key louvain_res0.1 in .var_names or .obs.columns.'
+srun: error: c123: task 0: Exited with exit code 1
+Job completed at Tue Oct 29 11:47:37 CDT 2024

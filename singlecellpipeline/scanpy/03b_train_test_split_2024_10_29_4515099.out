@@ -1,0 +1,8 @@
+Job started on c140.mgmt.hellbender at Tue Oct 29 21:05:26 CDT 2024
+SLURM Job ID: 4515099
+SLURM Job Name: 03b_train_test_split_2024_10_29
+Conda environment: scanpy
+Train set size: (48657, 29634)
+Test set size: (20853, 29634)
+Train Test split complete! File written to /cluster/pixstor/xudong-lab/sah2p/projects/sc_data/GSE131907/
+Job completed at Tue Oct 29 21:06:02 CDT 2024

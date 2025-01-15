@@ -1,0 +1,8 @@
+/var/spool/slurm/slurmd/job4513009/slurm_script: line 15: source: /cluster/pixstor/xudong-lab/sah2p/tools/miniconda3/bin: is a directory
+Job started on c156.mgmt.hellbender at Tue Oct 29 11:06:40 CDT 2024
+SLURM Job ID: 4513009
+SLURM Job Name: feature_engineering_2024_10_29
+Conda environment: scanpy
+WARNING: saving figure to file figures/filter_genes_dispersionHVG.png
+Feature Engineering complete! File written to /cluster/pixstor/xudong-lab/sah2p/projects/scgpt/GSE131907/03_HVG_adata.h5ad
+Job completed at Tue Oct 29 11:11:20 CDT 2024

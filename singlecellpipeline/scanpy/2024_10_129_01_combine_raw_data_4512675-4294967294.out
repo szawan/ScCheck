@@ -1,0 +1,19 @@
+/var/spool/slurm/slurmd/job4512675/slurm_script: line 13: activate: No such file or directory
+Index(['AAACCTGAGAAGGTGA_LUNG_N18', 'AAACCTGAGACAAAGG_LUNG_N18',
+       'AAACCTGAGACCTTTG_LUNG_N30', 'AAACCTGAGACTGGGT_LUNG_N30',
+       'AAACCTGAGAGCAATT_LUNG_N31', 'AAACCTGAGAGCCTAG_LUNG_N20',
+       'AAACCTGAGAGGGATA_LUNG_N08', 'AAACCTGAGATGTGGC_LUNG_N06',
+       'AAACCTGAGCAATATG_LUNG_N34', 'AAACCTGAGCACCGCT_LUNG_N08',
+       ...
+       'TTTGTCATCCTGCAGG_LUNG_T34', 'TTTGTCATCCTTTCTC_LUNG_T06',
+       'TTTGTCATCGACGGAA_LUNG_T25', 'TTTGTCATCGCGGATC_LUNG_T30',
+       'TTTGTCATCGGTGTTA_LUNG_T28', 'TTTGTCATCTCACATT_LUNG_T31',
+       'TTTGTCATCTGCGACG_LUNG_T31', 'TTTGTCATCTTGCCGT_LUNG_T30',
+       'TTTGTCATCTTTACAC_LUNG_T25', 'TTTGTCATCTTTAGGG_LUNG_T31'],
+      dtype='object', length=88144)
+Traceback (most recent call last):
+  File "/cluster/pixstor/xudong-lab/sah2p/projects/scGPT/szawa_version/singlecellpipeline/scanpy/01_combine_raw_data.py", line 38, in <module>
+    process_data(args.input_path_1, args.input_path_2, args.output_path)
+  File "/cluster/pixstor/xudong-lab/sah2p/projects/scGPT/szawa_version/singlecellpipeline/scanpy/01_combine_raw_data.py", line 21, in process_data
+    adata = ad(X=counts.T.values)
+TypeError: 'module' object is not callable

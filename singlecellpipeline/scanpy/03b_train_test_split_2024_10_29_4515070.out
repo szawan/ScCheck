@@ -1,0 +1,11 @@
+/var/spool/slurm/slurmd/job4515070/slurm_script: line 15: source: /cluster/pixstor/xudong-lab/sah2p/tools/miniconda3/bin: is a directory
+Job started on c140.mgmt.hellbender at Tue Oct 29 20:54:11 CDT 2024
+SLURM Job ID: 4515070
+SLURM Job Name: 03b_train_test_split_2024_10_29
+Conda environment: base
+  File "/cluster/pixstor/xudong-lab/sah2p/projects/scGPT/szawa_version/singlecellpipeline/scanpy/03b_train_test_split.py", line 19
+    stratify=adata.obs[label]
+             ^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+srun: error: c140: task 0: Exited with exit code 1
+Job completed at Tue Oct 29 20:54:11 CDT 2024

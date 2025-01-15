@@ -1,0 +1,11 @@
+/var/spool/slurm/slurmd/job4513681/slurm_script: line 15: source: /cluster/pixstor/xudong-lab/sah2p/tools/miniconda3/bin: is a directory
+Job started on c133.mgmt.hellbender at Tue Oct 29 13:56:33 CDT 2024
+SLURM Job ID: 4513681
+SLURM Job Name: feature_engineering_2024_10_29
+Conda environment: base
+Traceback (most recent call last):
+  File "/cluster/pixstor/xudong-lab/sah2p/projects/scGPT/szawa_version/singlecellpipeline/scanpy/03_feature_engineering.py", line 1, in <module>
+srun: error: c133: task 0: Exited with exit code 1
+    import scanpy as sc
+ModuleNotFoundError: No module named 'scanpy'
+Job completed at Tue Oct 29 13:56:34 CDT 2024

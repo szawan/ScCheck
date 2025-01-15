@@ -1,0 +1,20 @@
+/var/spool/slurm/slurmd/job4513542/slurm_script: line 15: source: /cluster/pixstor/xudong-lab/sah2p/tools/miniconda3/bin: is a directory
+Job started on c133.mgmt.hellbender at Tue Oct 29 12:53:47 CDT 2024
+SLURM Job ID: 4513542
+SLURM Job Name: 04_clustering_2024_10_29
+Conda environment: scanpy
+WARNING: saving figure to file figures/pca_variance_ratio04_clustering_PCA.png
+WARNING: saving figure to file figures/umap04_clustering_umap.pdf
+WARNING: saving figure to file figures/tsne04_clustering_tsne.pdf
+/cluster/pixstor/xudong-lab/sah2p/projects/scGPT/szawa_version/singlecellpipeline/scanpy/04_clustering.py:28: FutureWarning: In the future, the default backend for leiden will be igraph instead of leidenalg.
+
+ To achieve the future defaults please pass: flavor="igraph" and n_iterations=2.  directed must also be False to work with igraph's implementation.
+  sc.tl.leiden(adata_obj,  key_added='leiden_res'+str(res),resolution=res)
+WARNING: saving figure to file figures/umap04_clustering_louvain_umap.pdf
+WARNING: saving figure to file figures/tsne04_clustering_louvain_tsne.pdf
+WARNING: saving figure to file figures/umap04_clustering_leiden_umap.pdf
+WARNING: saving figure to file figures/tsne04_clustering_leiden_tsne.pdf
+WARNING: saving figure to file figures/umap04_clustering_predicted_doublets.pdf
+WARNING: saving figure to file figures/umap04_clustering_final_clusters.pdf
+Clustering complete! File written to /cluster/pixstor/xudong-lab/sah2p/projects/sc_data/GSE131907/04_clusters.h5ad
+Job completed at Tue Oct 29 13:01:50 CDT 2024

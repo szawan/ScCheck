@@ -1,0 +1,7 @@
+/var/spool/slurm/slurmd/job4514257/slurm_script: line 15: source: /cluster/pixstor/xudong-lab/sah2p/tools/miniconda3/bin: is a directory
+Job started on c113.mgmt.hellbender at Tue Oct 29 16:19:55 CDT 2024
+SLURM Job ID: 4514257
+SLURM Job Name: 05_add_literature_annotations_2024_10_29
+Conda environment: scanpy
+Annotation from literature complete! File written to /cluster/pixstor/xudong-lab/sah2p/projects/sc_data/GSE131907/05a_literature_annotations.h5ad
+Job completed at Tue Oct 29 16:20:26 CDT 2024

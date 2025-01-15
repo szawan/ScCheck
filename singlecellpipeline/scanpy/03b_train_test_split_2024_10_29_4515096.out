@@ -1,0 +1,14 @@
+Job started on c140.mgmt.hellbender at Tue Oct 29 21:03:54 CDT 2024
+SLURM Job ID: 4515096
+SLURM Job Name: 03b_train_test_split_2024_10_29
+Conda environment: scanpy
+Traceback (most recent call last):
+  File "/cluster/pixstor/xudong-lab/sah2p/projects/scGPT/szawa_version/singlecellpipeline/scanpy/03b_train_test_split.py", line 46, in <module>
+    main(args.input_path, args.output_path)
+  File "/cluster/pixstor/xudong-lab/sah2p/projects/scGPT/szawa_version/singlecellpipeline/scanpy/03b_train_test_split.py", line 33, in main
+    adata_train, adata_test = train_test_split('phenotype',adata_obj)
+  File "/cluster/pixstor/xudong-lab/sah2p/projects/scGPT/szawa_version/singlecellpipeline/scanpy/03b_train_test_split.py", line 17, in train_test_split
+    train_indices, test_indices = train_test_split(adata.obs_names,
+TypeError: train_test_split() got an unexpected keyword argument 'test_size'
+srun: error: c140: task 0: Exited with exit code 1
+Job completed at Tue Oct 29 21:04:06 CDT 2024

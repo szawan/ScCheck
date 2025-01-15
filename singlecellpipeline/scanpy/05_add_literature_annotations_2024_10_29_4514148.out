@@ -1,0 +1,11 @@
+/var/spool/slurm/slurmd/job4514148/slurm_script: line 15: source: /cluster/pixstor/xudong-lab/sah2p/tools/miniconda3/bin: is a directory
+Job started on c113.mgmt.hellbender at Tue Oct 29 16:07:49 CDT 2024
+SLURM Job ID: 4514148
+SLURM Job Name: 05_add_literature_annotations_2024_10_29
+Conda environment: scanpy
+Traceback (most recent call last):
+  File "/cluster/pixstor/xudong-lab/sah2p/projects/scGPT/szawa_version/singlecellpipeline/scanpy/05_add_literature_annotations.py", line 39, in <module>
+    main(args.input_path, args.output_path)
+TypeError: main() missing 1 required positional argument: 'output_path'
+srun: error: c113: task 0: Exited with exit code 1
+Job completed at Tue Oct 29 16:07:54 CDT 2024

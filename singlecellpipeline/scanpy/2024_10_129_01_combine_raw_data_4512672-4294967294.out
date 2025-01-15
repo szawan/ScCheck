@@ -1,0 +1,5 @@
+/var/spool/slurm/slurmd/job4512672/slurm_script: line 13: activate: No such file or directory
+Traceback (most recent call last):
+  File "/cluster/pixstor/xudong-lab/sah2p/projects/scGPT/szawa_version/singlecellpipeline/scanpy/01_combine_raw_data.py", line 36, in <module>
+    args = parser.args()
+AttributeError: 'ArgumentParser' object has no attribute 'args'

@@ -1,0 +1,40 @@
+/var/spool/slurm/slurmd/job4512975/slurm_script: line 15: source: /cluster/pixstor/xudong-lab/sah2p/tools/miniconda3/bin: is a directory
+Job started on c158.mgmt.hellbender at Tue Oct 29 10:58:04 CDT 2024
+SLURM Job ID: 4512975
+SLURM Job Name: feature_engineering_2024_10_29
+Conda environment: scanpy
+WARNING: saving figure to file figures/filter_genes_dispersion/cluster/pixstor/xudong-lab/sah2p/projects/scgpt/GSE131907/HVG.png
+Traceback (most recent call last):
+  File "/cluster/pixstor/xudong-lab/sah2p/projects/scGPT/szawa_version/singlecellpipeline/scanpy/03_feature_engineering.py", line 43, in <module>
+    main(args.input_path, args.output_path)
+  File "/cluster/pixstor/xudong-lab/sah2p/projects/scGPT/szawa_version/singlecellpipeline/scanpy/03_feature_engineering.py", line 34, in main
+    adata_obj = select_features(adata_obj, output_path)
+  File "/cluster/pixstor/xudong-lab/sah2p/projects/scGPT/szawa_version/singlecellpipeline/scanpy/03_feature_engineering.py", line 26, in select_features
+    sc.pl.highly_variable_genes(adata_obj, save = output_path+"HVG.png")
+  File "/mnt/pixstor/dbllab/sah2p/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/legacy_api_wrap/__init__.py", line 80, in fn_compatible
+    return fn(*args_all, **kw)
+  File "/mnt/pixstor/dbllab/sah2p/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/scanpy/plotting/_preprocessing.py", line 100, in highly_variable_genes
+    _utils.savefig_or_show("filter_genes_dispersion", show=show, save=save)
+  File "/mnt/pixstor/dbllab/sah2p/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/scanpy/plotting/_utils.py", line 361, in savefig_or_show
+    savefig(writekey, dpi=dpi, ext=ext)
+  File "/mnt/pixstor/dbllab/sah2p/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/scanpy/plotting/_utils.py", line 337, in savefig
+    plt.savefig(filename, dpi=dpi, bbox_inches="tight")
+  File "/mnt/pixstor/dbllab/sah2p/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/matplotlib/pyplot.py", line 1228, in savefig
+    res = fig.savefig(*args, **kwargs)  # type: ignore[func-returns-value]
+  File "/mnt/pixstor/dbllab/sah2p/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/matplotlib/figure.py", line 3395, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/mnt/pixstor/dbllab/sah2p/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 2204, in print_figure
+    result = print_method(
+  File "/mnt/pixstor/dbllab/sah2p/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 2054, in <lambda>
+    print_method = functools.wraps(meth)(lambda *args, **kwargs: meth(
+  File "/mnt/pixstor/dbllab/sah2p/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/matplotlib/backends/backend_agg.py", line 496, in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+  File "/mnt/pixstor/dbllab/sah2p/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/matplotlib/backends/backend_agg.py", line 445, in _print_pil
+    mpl.image.imsave(
+  File "/mnt/pixstor/dbllab/sah2p/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/matplotlib/image.py", line 1676, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/mnt/pixstor/dbllab/sah2p/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/PIL/Image.py", line 2563, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: '/cluster/pixstor/xudong-lab/sah2p/projects/scGPT/szawa_version/singlecellpipeline/scanpy/figures/filter_genes_dispersion/cluster/pixstor/xudong-lab/sah2p/projects/scgpt/GSE131907/HVG.png'
+srun: error: c158: task 0: Exited with exit code 1
+Job completed at Tue Oct 29 11:01:59 CDT 2024

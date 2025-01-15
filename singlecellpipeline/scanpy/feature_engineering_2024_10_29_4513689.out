@@ -1,0 +1,7 @@
+Job started on c156.mgmt.hellbender at Tue Oct 29 13:59:06 CDT 2024
+SLURM Job ID: 4513689
+SLURM Job Name: feature_engineering_2024_10_29
+Conda environment: scanpy
+WARNING: saving figure to file figures/filter_genes_dispersionHVG.png
+Feature Engineering complete! File written to /cluster/pixstor/xudong-lab/sah2p/projects/sc_data/GSE131907/03_HVG_adata.h5ad
+Job completed at Tue Oct 29 14:06:46 CDT 2024
