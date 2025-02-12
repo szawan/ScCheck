@@ -1,0 +1,18 @@
+Job started on c079.mgmt.hellbender at Tue Feb 11 20:14:08 CST 2025
+SLURM Job ID: 6640608
+SLURM Job Name: 01_Basic_statistics_SRP166333
+Conda environment: scanpy
+Denoised Data Statistics:
+Mean: 0.10327620649334084
+Standard Deviation: 1.6603740199189523
+Min: -14.304604468089892
+Max: 772.6249645914941
+Are All Values Integers: False
+
+Raw Data Statistics:
+Mean: 0.04633869420869905
+Standard Deviation: 0.29559756918175506
+Min: 0.0
+Max: 7.709360692210425
+Are All Values Integers: False
+Job completed at Tue Feb 11 20:14:29 CST 2025

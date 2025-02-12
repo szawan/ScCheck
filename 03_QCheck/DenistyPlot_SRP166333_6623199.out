@@ -1,0 +1,9 @@
+Job started on c135.mgmt.hellbender at Wed Feb  5 14:06:21 CST 2025
+SLURM Job ID: 6623199
+SLURM Job Name: DenistyPlot_SRP166333
+Conda environment: scanpy
+Traceback (most recent call last):
+  File "/cluster/pixstor/home/sah2p/ondemand/projects/ScCheck/03_QCheck/density_plot.py", line 21, in <module>
+    sns.kdeplot(np.ravel(adata.X.A), label="Denoised", fill=True, alpha=0.5)
+AttributeError: 'numpy.ndarray' object has no attribute 'A'
+Job completed at Wed Feb  5 14:58:52 CST 2025
