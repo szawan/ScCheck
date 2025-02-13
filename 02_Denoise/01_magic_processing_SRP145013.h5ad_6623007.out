@@ -1,0 +1,30 @@
+Job started on c138.mgmt.hellbender at Wed Feb  5 11:46:32 CST 2025
+SLURM Job ID: 6623007
+SLURM Job Name: 01_magic_processing_SRP145013.h5ad
+Conda environment: scanpy
+Loading data from /home/sah2p/ondemand/singlecell_data/Maize/SRP145013.h5ad...
+Applying MAGIC...
+Calculating MAGIC...
+  Running MAGIC on 40848 cells and 67300 genes.
+/home/sah2p/ondemand/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/magic/magic.py:425: UserWarning: Input matrix contains unexpressed genes. Please remove them prior to running MAGIC.
+  warnings.warn(
+  Calculating graph and diffusion operator...
+    Calculating PCA...
+    Calculated PCA in 134.06 seconds.
+    Calculating KNN search...
+    Calculated KNN search in 143.80 seconds.
+    Calculating affinities...
+    Calculated affinities in 145.66 seconds.
+  Calculated graph and diffusion operator in 423.57 seconds.
+/home/sah2p/ondemand/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/magic/magic.py:455: UserWarning: Returning imputed values for all genes on a (40848 x 67300) matrix will require approximately 20.48GB of memory. Suppress this warning with `genes='all_genes'`
+  warnings.warn(
+  Calculating imputation...
+  Calculated imputation in 0.38 seconds.
+Calculated MAGIC in 431.25 seconds.
+Traceback (most recent call last):
+  File "/cluster/pixstor/home/sah2p/ondemand/projects/ScCheck/02_Denoise/01_Magic.py", line 25, in <module>
+    adata.layers['magic_approximate'] = adata.layers['magic_approximate'].tocsr()  # Convert to CSR format
+AttributeError: 'numpy.ndarray' object has no attribute 'tocsr'
+srun: error: c138: task 0: Exited with exit code 1
+MAGIC processing completed successfully. Output file: /home/sah2p/ondemand/singlecell_data/Maize/SRP145013_magic_denoised.h5ad
+Job completed at Wed Feb  5 11:53:58 CST 2025

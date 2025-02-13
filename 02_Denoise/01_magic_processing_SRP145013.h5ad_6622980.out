@@ -1,0 +1,52 @@
+Job started on c133.mgmt.hellbender at Wed Feb  5 11:28:12 CST 2025
+SLURM Job ID: 6622980
+SLURM Job Name: 01_magic_processing_SRP145013.h5ad
+Conda environment: scanpy
+Loading data from /home/sah2p/ondemand/singlecell_data/Maize/SRP145013.h5ad...
+Applying MAGIC...
+Calculating MAGIC...
+  Running MAGIC on 40848 cells and 67300 genes.
+/home/sah2p/ondemand/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/magic/magic.py:425: UserWarning: Input matrix contains unexpressed genes. Please remove them prior to running MAGIC.
+  warnings.warn(
+  Calculating graph and diffusion operator...
+    Calculating PCA...
+    Calculated PCA in 132.68 seconds.
+    Calculating KNN search...
+    Calculated KNN search in 144.37 seconds.
+    Calculating affinities...
+    Calculated affinities in 143.00 seconds.
+  Calculated graph and diffusion operator in 420.10 seconds.
+/home/sah2p/ondemand/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/magic/magic.py:455: UserWarning: Returning imputed values for all genes on a (40848 x 67300) matrix will require approximately 20.48GB of memory. Suppress this warning with `genes='all_genes'`
+  warnings.warn(
+  Calculating imputation...
+  Calculated imputation in 0.37 seconds.
+Calculated MAGIC in 428.02 seconds.
+Columns in adata.var before saving: Index(['features'], dtype='object')
+Saving MAGIC-processed data to /home/sah2p/ondemand/singlecell_data/Maize/SRP145013_magic_denoised.h5ad...
+Traceback (most recent call last):
+  File "/cluster/pixstor/home/sah2p/ondemand/projects/ScCheck/02_Denoise/01_Magic.py", line 37, in <module>
+    adata.write_h5ad(args.output_path)
+  File "/home/sah2p/ondemand/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/anndata/_core/anndata.py", line 2017, in write_h5ad
+    write_h5ad(
+  File "/home/sah2p/ondemand/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/anndata/_io/h5ad.py", line 110, in write_h5ad
+    write_elem(f, "layers", dict(adata.layers), dataset_kwargs=dataset_kwargs)
+  File "/home/sah2p/ondemand/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/anndata/_io/specs/registry.py", line 359, in write_elem
+    Writer(_REGISTRY).write_elem(store, k, elem, dataset_kwargs=dataset_kwargs)
+  File "/home/sah2p/ondemand/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/anndata/_io/utils.py", line 243, in func_wrapper
+    return func(*args, **kwargs)
+  File "/home/sah2p/ondemand/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/anndata/_io/specs/registry.py", line 309, in write_elem
+    return write_func(store, k, elem, dataset_kwargs=dataset_kwargs)
+  File "/home/sah2p/ondemand/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/anndata/_io/specs/registry.py", line 57, in wrapper
+    result = func(g, k, *args, **kwargs)
+  File "/home/sah2p/ondemand/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/anndata/_io/specs/methods.py", line 312, in write_mapping
+    _writer.write_elem(g, sub_k, sub_v, dataset_kwargs=dataset_kwargs)
+  File "/home/sah2p/ondemand/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/anndata/_io/utils.py", line 243, in func_wrapper
+    return func(*args, **kwargs)
+  File "/home/sah2p/ondemand/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/anndata/_io/specs/registry.py", line 309, in write_elem
+    return write_func(store, k, elem, dataset_kwargs=dataset_kwargs)
+  File "/home/sah2p/ondemand/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/anndata/_io/specs/registry.py", line 57, in wrapper
+    result = func(g, k, *args, **kwargs)
+  File "/home/sah2p/ondemand/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/anndata/_io/specs/methods.py", line 339, in write_basic
+    f.create_dataset(k, data=elem, **dataset_kwargs)
+  File "/home/sah2p/ondemand/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/h5py/_hl/group.py", line 148, in create_dataset
+    dsid = dataset.make_new_dset(group, shape, dtype, data, name, **kwds)
