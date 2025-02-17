@@ -1,0 +1,32 @@
+2025-02-17 15:39:30,932 - INFO - Current working directory: /cluster/pixstor/home/sah2p/ondemand/singlecell_data/Arabidopsis
+2025-02-17 15:39:30,932 - INFO - 📂 Loading data from: SRP166333_hvg_filtered.h5ad
+2025-02-17 15:39:31,171 - INFO - Plotting before batch correction...
+/home/sah2p/ondemand/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/scanpy/plotting/_tools/scatterplots.py:1251: FutureWarning: The default value of 'ignore' for the `na_action` parameter in pandas.Categorical.map is deprecated and will be changed to 'None' in a future version. Please set na_action to the desired value to avoid seeing this warning
+  color_vector = pd.Categorical(values.map(color_map))
+WARNING: saving figure to file figures/umapbefore_batch_correction.png
+/home/sah2p/ondemand/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/scanpy/plotting/_tools/scatterplots.py:1251: FutureWarning: The default value of 'ignore' for the `na_action` parameter in pandas.Categorical.map is deprecated and will be changed to 'None' in a future version. Please set na_action to the desired value to avoid seeing this warning
+  color_vector = pd.Categorical(values.map(color_map))
+WARNING: saving figure to file figures/pcabefore_batch_correction.png
+/home/sah2p/ondemand/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/scanpy/plotting/_tools/scatterplots.py:1251: FutureWarning: The default value of 'ignore' for the `na_action` parameter in pandas.Categorical.map is deprecated and will be changed to 'None' in a future version. Please set na_action to the desired value to avoid seeing this warning
+  color_vector = pd.Categorical(values.map(color_map))
+WARNING: saving figure to file figures/umapbefore_batch_correction.pngleiden.pdf
+/home/sah2p/ondemand/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/scanpy/plotting/_tools/scatterplots.py:1251: FutureWarning: The default value of 'ignore' for the `na_action` parameter in pandas.Categorical.map is deprecated and will be changed to 'None' in a future version. Please set na_action to the desired value to avoid seeing this warning
+  color_vector = pd.Categorical(values.map(color_map))
+WARNING: saving figure to file figures/umapbefore_batch_correction.pnglouvain.pdf
+WARNING: consider updating your call to make use of `computation`
+2025-02-17 15:41:09,461 - INFO - Plotting after batch correction...
+/home/sah2p/ondemand/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/scanpy/plotting/_tools/scatterplots.py:1251: FutureWarning: The default value of 'ignore' for the `na_action` parameter in pandas.Categorical.map is deprecated and will be changed to 'None' in a future version. Please set na_action to the desired value to avoid seeing this warning
+  color_vector = pd.Categorical(values.map(color_map))
+WARNING: saving figure to file figures/umapafter_batch_correction.png
+/home/sah2p/ondemand/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/scanpy/plotting/_tools/scatterplots.py:1251: FutureWarning: The default value of 'ignore' for the `na_action` parameter in pandas.Categorical.map is deprecated and will be changed to 'None' in a future version. Please set na_action to the desired value to avoid seeing this warning
+  color_vector = pd.Categorical(values.map(color_map))
+WARNING: saving figure to file figures/pcaafter_batch_correction.png
+/home/sah2p/ondemand/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/scanpy/plotting/_tools/scatterplots.py:1251: FutureWarning: The default value of 'ignore' for the `na_action` parameter in pandas.Categorical.map is deprecated and will be changed to 'None' in a future version. Please set na_action to the desired value to avoid seeing this warning
+  color_vector = pd.Categorical(values.map(color_map))
+WARNING: saving figure to file figures/umapafter_batch_correction.pngleiden.pdf
+/home/sah2p/ondemand/tools/miniconda3/envs/scanpy/lib/python3.9/site-packages/scanpy/plotting/_tools/scatterplots.py:1251: FutureWarning: The default value of 'ignore' for the `na_action` parameter in pandas.Categorical.map is deprecated and will be changed to 'None' in a future version. Please set na_action to the desired value to avoid seeing this warning
+  color_vector = pd.Categorical(values.map(color_map))
+WARNING: saving figure to file figures/umapafter_batch_correction.pnglouvain.pdf
+2025-02-17 15:41:46,682 - INFO - Current memory usage: 824.898842MB; Peak: 2195.992108MB
+2025-02-17 15:41:47,127 - INFO - Corrected data saved to: SRP166333_batchCorrected.h5ad
+✅ Job Completed at Mon Feb 17 15:41:47 CST 2025

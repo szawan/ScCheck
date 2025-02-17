@@ -1,0 +1,16 @@
+2025-02-14 10:57:24,759 - INFO - Current working directory: /cluster/pixstor/home/sah2p/ondemand/singlecell_data/Arabidopsis
+2025-02-14 10:57:24,759 - INFO - 📂 Loading data from: SRP166333_raw.h5ad
+2025-02-14 10:57:25,093 - INFO - Found 38 mitochondrial genes and 89 plastid genes.
+2025-02-14 10:57:30,358 - INFO - Remaining cells after filtering: 14279
+2025-02-14 11:00:44,331 - INFO - Remaining cells after doubletRemoval: 14252
+2025-02-14 11:00:44,331 - ERROR - 🚨 FileNotFoundError: [Errno 2] No such file or directory: ''
+2025-02-14 11:06:46,279 - INFO - Current working directory: /cluster/pixstor/home/sah2p/ondemand/singlecell_data/Arabidopsis
+2025-02-14 11:06:46,281 - INFO - 📂 Loading data from: SRP166333_raw.h5ad
+2025-02-14 11:06:46,627 - INFO - Found 38 mitochondrial genes and 89 plastid genes.
+2025-02-14 11:06:51,769 - INFO - Remaining cells after filtering: 14279
+2025-02-14 11:09:35,136 - INFO - Remaining cells after doubletRemoval: 14244
+2025-02-14 11:09:35,136 - INFO - 📂 Saving filtered AnnData object to: SRP166333_filtered.h5ad
+2025-02-14 11:09:35,516 - INFO - ✅ Filtering and saving completed successfully.
+2025-02-14 11:09:35,768 - INFO - 
+🕒 Execution Time: 169.24 seconds
+2025-02-14 11:09:35,770 - INFO - 🧠 Peak Memory Usage: 9029.70 MB
