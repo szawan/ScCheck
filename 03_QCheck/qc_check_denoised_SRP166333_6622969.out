@@ -1,6 +1,0 @@
-Job started on c133.mgmt.hellbender at Wed Feb  5 11:21:10 CST 2025
-SLURM Job ID: 6622969
-SLURM Job Name: qc_check_denoised_SRP166333
-Conda environment: scanpy
-python: can't open file '/cluster/pixstor/home/sah2p/ondemand/projects/ScCheck/03_QCheck/quality_check_denoised.py': [Errno 2] No such file or directory
-Job completed at Wed Feb  5 11:21:11 CST 2025
