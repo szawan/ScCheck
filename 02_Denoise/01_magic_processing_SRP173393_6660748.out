@@ -1,0 +1,11 @@
+Job started on c002.mgmt.hellbender at Mon Feb 17 16:13:47 CST 2025
+SLURM Job ID: 6660748
+SLURM Job Name: 01_magic_processing_SRP173393
+Conda environment: scanpy
+Loading data from /home/sah2p/ondemand/singlecell_data/Arabidopsis/SRP166333_batchCorrected.h5ad...
+Traceback (most recent call last):
+  File "/cluster/pixstor/home/sah2p/ondemand/projects/ScCheck/02_Denoise/01_Magic.py", line 17, in <module>
+    adata.raw.var.columns = ['genes']
+AttributeError: 'NoneType' object has no attribute 'var'
+srun: error: c002: task 0: Exited with exit code 1
+Error: MAGIC output file not found.

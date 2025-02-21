@@ -41,34 +41,44 @@ def filter_anndata(context_path,input_file, output_file):
         
         log.info(f"📂 Loading data from: {input_path}")
         adata_raw = sc.read_h5ad(input_path)
-        
+       
         # Identify mitochondrial and plastid genes
-        mt_genes = [gene for gene in adata_raw.var_names if gene.startswith("ATMG")]
-        pt_genes = [gene for gene in adata_raw.var_names if gene.startswith("ATCG")]
-        # Print the number of detected genes
-        log.info(f"Found {len(mt_genes)} mitochondrial genes and {len(pt_genes)} plastid genes.")
+        # mt_genes = [gene for gene in adata_raw.var_names if gene.startswith("ATMG")]
+        # pt_genes = [gene for gene in adata_raw.var_names if gene.startswith("ATCG")]
+        # # Print the number of detected genes
+        # log.info(f"Found {len(mt_genes)} mitochondrial genes and {len(pt_genes)} plastid genes.")
 
-        # Compute the fraction of mitochondrial gene counts per cell
-        adata_raw.obs["percent_mt"] = (
-            np.sum(adata_raw[:, mt_genes].X, axis=1) / np.sum(adata_raw.X, axis=1)
-        ) * 100
+        # # Compute the fraction of mitochondrial gene counts per cell
+        # adata_raw.obs["percent_mt"] = (
+        #     np.sum(adata_raw[:, mt_genes].X, axis=1) / np.sum(adata_raw.X, axis=1)
+        # ) * 100
 
-        # Compute the fraction of plastid gene counts per cell
-        adata_raw.obs["percent_pt"] = (
-            np.sum(adata_raw[:, pt_genes].X, axis=1) / np.sum(adata_raw.X, axis=1)
-        ) * 100
+        # # Compute the fraction of plastid gene counts per cell
+        # adata_raw.obs["percent_pt"] = (
+        #     np.sum(adata_raw[:, pt_genes].X, axis=1) / np.sum(adata_raw.X, axis=1)
+        # ) * 100
 
-        adata_raw.obs["n_genes_by_counts"] = (adata_raw.X > 0).sum(axis=1)
-        # Compute total UMI counts per cell (nCount_RNA equivalent)
-        adata_raw.obs["total_counts"] = adata_raw.X.sum(axis=1)
+        # adata_raw.obs["n_genes_by_counts"] = (adata_raw.X > 0).sum(axis=1)
+        # # Compute total UMI counts per cell (nCount_RNA equivalent)
+        # adata_raw.obs["total_counts"] = adata_raw.X.sum(axis=1)
 
+        adata_raw.var["mt"] = adata_raw.var_names.str.startswith("ATMG")
+        adata_raw.var["pt"] = adata_raw.var_names.str.startswith("ATCG")
+        
+        sc.pp.calculate_qc_metrics(adata_raw, qc_vars=["percent_mt", "percent_pt"], inplace=True, log1p=True)
 
         # Visualize distributions before filtering
-        sc.pl.violin(adata_raw, ["percent_mt", "percent_pt"], 
-                        jitter=0.4, log=True, \
-                        ylabel="Percentage of Counts", save="before_ptmt.png")
-        sc.pl.violin(adata_raw,["n_genes_by_counts","total_counts"], jitter=0.4, 
-                        log=True, ylabel="Counts",save="before_counts.png")
+        sc.pl.violin(
+            adata_raw,
+            ["n_genes_by_counts", "total_counts", "pct_counts_mt","pct_counts_pt"],
+            jitter=0.4,
+            multi_panel=True,
+            save="_02_before_filtering_qc.png"
+        )
+        sc.pl.scatter(adata_raw, "total_counts", "n_genes_by_counts", color="pct_counts_mt", save="_02_total_counts_vs_n_genes(mt).png")
+        sc.pl.scatter(adata_raw, "total_counts", "n_genes_by_counts", color="pct_counts_pt", save="_02_total_counts_vs_n_genes(pt).png")
+            
+
 
         # Step 6: Apply IQR-based filtering
         Q1 = np.percentile(adata_raw.obs["n_genes_by_counts"], 25)  # First quartile

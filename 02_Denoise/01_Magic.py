@@ -13,9 +13,8 @@ args = parser.parse_args()
 # Load the dataset
 print(f"Loading data from {args.input_path}...")
 adata = sc.read_h5ad(args.input_path)
-adata.X = adata.raw.X.copy()
-adata.var.index.name = 'genes'
-adata.raw.var.columns = ['genes']
+# adata.var.index.name = 'genes'
+# adata.raw.var.columns = ['genes']
 
 
 # Apply MAGIC

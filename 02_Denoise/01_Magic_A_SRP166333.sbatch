@@ -15,7 +15,7 @@ cd "$(pwd)"
 source /home/sah2p/ondemand/tools/miniconda3/bin/activate scanpy
 
 # Input and output paths
-INPUT_FILE="/home/sah2p/ondemand/singlecell_data/Arabidopsis/SRP166333.h5ad"
+INPUT_FILE="/home/sah2p/ondemand/singlecell_data/Arabidopsis/SRP166333_batchCorrected.h5ad"
 OUTPUT_FILE="/home/sah2p/ondemand/singlecell_data/Arabidopsis/SRP166333_magic_denoised.h5ad"
 
 # Check if input file exists
