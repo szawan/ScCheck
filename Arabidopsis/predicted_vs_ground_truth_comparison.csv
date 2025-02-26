@@ -1,0 +1,13 @@
+predicted_celltype,Companion cell,G2/M phase,Metaxylem,Non-hair,Phloem pole pericycle,Protoxylem,Root cap,Root cortex,Root endodermis,Root hair,Root procambium,S phase,Sieve element,Xylem pole pericycle
+Companion cell,603,0,26,4,34,85,0,1,40,2,98,11,17,6
+G2/M phase,22,104,30,16,1,5,205,20,12,488,12,61,0,430
+Metaxylem,0,0,496,0,0,1,0,1,0,0,11,10,0,1
+Non-hair,1,0,2,1164,2,6,0,5,0,5,0,0,1,1
+Phloem pole pericycle,6,0,2,0,724,0,0,0,1,0,13,43,0,39
+Root cap,0,0,0,1,0,0,490,0,0,0,0,0,0,0
+Root cortex,2,0,0,6,0,2,0,1278,3,3,1,0,3,0
+Root endodermis,0,0,3,1,0,0,0,2,1271,0,2,0,1,1
+Root hair,0,0,0,7,0,1,0,1,1,709,1,2,1,0
+Root procambium,2,0,1,5,2,0,3,2,2,0,1577,32,2,2
+Sieve element,3,0,0,0,0,0,0,0,0,0,1,0,148,0
+Xylem pole pericycle,6,0,0,3,7,4,5,5,0,3,11,77,0,1718
